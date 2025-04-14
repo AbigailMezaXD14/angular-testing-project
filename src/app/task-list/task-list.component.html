@@ -1,1 +1,21 @@
-<p>task-list works!</p>
+<div class="tasks">
+    @for (i of tasks; track i) {
+        <div class="tarea">
+            <p> {{tasks.values}} </p>
+            <button (click)="deleteTask">Eliminar</button>
+            <button (click)="updateTask">Editar</button>
+
+        </div>
+
+    }
+</div>
+<div class="para-modificar">
+    <form action="">
+        <div>
+            <input type="text" id="tarea-cosa" [(ngModel)]="newTask.title"><button (click)="addTask">Agregar</button>
+        </div>
+        <div>
+            <input type="text"><button>Actualizar</button>
+        </div>
+    </form>
+  </div>
